@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env   
+.vscode/
+instance
+line_bot.sqlite
+.env.local
+.env.*.local
+venv/
+ngrok.exe* 
+pytest/mypy caches
+build/dist 
+OS files
