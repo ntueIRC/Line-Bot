@@ -300,7 +300,7 @@ def handle_message(event):
                 actions=[
                     PostbackAction(label='回傳值', data='ping', display_text='傳了'),
                     MessageAction(label='傳「哈囉」', text='哈囉'),
-                    URIAction(label='連結', uri='https://www.youtube.com/watch?v=Mw3cODdkaFM'),
+                    URIAction(label='連結', uri='https://developers.line.biz/en/docs/messaging-api/message-types/#buttons-template'),
                     DatetimePickerAction(label='選擇時間', data='時間', display_text='done', mode='datetime')
                 ]
             )
@@ -323,7 +323,7 @@ def handle_message(event):
                         title='Demo1',
                         text='Description1',
                         actions=[
-                            URIAction(label='連結', uri='https://www.youtube.com/watch?v=Mw3cODdkaFM')
+                            URIAction(label='連結', uri='https://developers.line.biz/en/docs/messaging-api/message-types/#carousel-template')
                         ]
                     ),
                     CarouselColumn(
@@ -354,7 +354,7 @@ def handle_message(event):
                         image_url='https://picx.zhimg.com/50/v2-f7de922bff135b8ebdd8cd9c7bc32c5d_720w.webp?source=1def8aca',
                         action=URIAction(
                             label='連結',
-                            uri='https://www.youtube.com/watch?v=Mw3cODdkaFM'
+                            uri='https://developers.line.biz/en/docs/messaging-api/message-types/#image-carousel-template'
                         )
                     ),
                     ImageCarouselColumn(
