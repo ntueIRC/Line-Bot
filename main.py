@@ -1,4 +1,6 @@
 from flask import Flask, request, abort
+import os
+from dotenv import load_dotenv
 
 from linebot.v3 import (
     WebhookHandler
@@ -58,8 +60,9 @@ from linebot.v3.webhooks import (
 
 app = Flask(__name__)
 
-configuration = Configuration(access_token='c79f7B6DWaW8AMJ/HW+4a0eteSO7hVJT5rdlPsq9f51l+4KgzxMpYhIwwKViOaWF+AGdNqhPbu9wyJIvNIqRn0ESw1GeHlfBPC0nd8vr6HJn0RrLOS4s/NZfqZsk7JQs8jvKkFYwxbMkwV5HzmmJiAdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('4f0f0710f951bc05c68b9fbf739ebf8e')
+load_dotenv()
+configuration = Configuration(access_token=os.getenv('ACCESS_TOKEN'))
+handler = WebhookHandler(os.getenv('WEBHOOK_HANDLER'))
 
 
 @app.route("/callback", methods=['POST'])
